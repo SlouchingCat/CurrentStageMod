@@ -1,0 +1,8 @@
+{
+    "name": "CurrentStageMod",
+    "version_number": "0.3",
+    "website_url": "https://github.com/SlouchingCat/CurrentStageMod",
+    "description": "This mod sends a message to chat when the stage advances.",
+    "dependencies": [
+    ]
+}
