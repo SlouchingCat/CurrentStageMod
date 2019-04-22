@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>CurrentStageMod</AssemblyName>
+    <RootNamespace>CurrentStageMod</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

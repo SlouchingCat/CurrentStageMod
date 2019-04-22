@@ -3,7 +3,7 @@ using RoR2;
 using UnityEngine;
 using System;
 
-namespace ExamplePlugin
+namespace CurrentStageMod
 {
     //This is an example plugin that can be put in BepInEx/plugins/ExamplePlugin/ExamplePlugin.dll to test out.
     //It's a very simple plugin that adds Bandit to the game, and gives you a tier 3 item whenever you press F2.
@@ -21,26 +21,37 @@ namespace ExamplePlugin
     public class CurrentStageMod : BaseUnityPlugin
     {
       //public event Action<Stage> onServerStageBegin = delegate { };
-      delegate void MyEventHandler(object sender);
+      float time = 15;
+      float timeout = 15; // Wait in between rounds to prevent too many messages triggering.
 
-        public void Update()
-        {
-            
-            //This if statement checks if the player has currently pressed F2, and then proceeds into the statement:
-            if (Input.GetKeyDown == "F12")
+      int count = 0;
+
+      public void Update()
+      {
+         time += Time.deltaTime;
+         RoR2.Stage.onServerStageBegin += (_) =>
+         {           
+            if (isTimeoutComplete())
             {
-                ////We grab a list of all available Tier 3 drops:
-                //var dropList = Run.instance.availableTier3DropList;
+               count++;
+               Chat.AddMessage($"Welcome to Stage {count}.");
+            }               
+         };
 
-                ////Randomly get the next item:
-                //var nextItem = Run.instance.treasureRng.RangeInt(0, dropList.Count);
+         if (Input.GetKeyDown(KeyCode.F3))
+         {
+            Chat.AddMessage($"The current time is {time}");
+         }
+      }
 
-                ////Get the player body to use a position:
-                //var transform = PlayerCharacterMasterController.instances[0].master.GetBodyObject().transform;
-
-                ////And then finally drop it infront of the player.
-                //PickupDropletController.CreatePickupDroplet(dropList[nextItem], transform.position, transform.forward * 20f);
-            }
-        }
+      private bool isTimeoutComplete()
+      {         
+         if (time >= timeout)
+         {
+            time = 0;
+            return true;
+         }
+         return false;
+      }
     }
 }
