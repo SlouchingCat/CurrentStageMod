@@ -2,8 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>CurrentStageMod</AssemblyName>
-    <RootNamespace>CurrentStageMod</RootNamespace>
+    <AssemblyName>CurrentStage</AssemblyName>
+    <RootNamespace>CurrentStage</RootNamespace>
+    <Configurations>Debug;Release;Make Build</Configurations>
+    <Authors>CurrentStageMod</Authors>
   </PropertyGroup>
 
   <ItemGroup>

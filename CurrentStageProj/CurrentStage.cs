@@ -2,12 +2,12 @@
 using RoR2;
 using UnityEngine;
 
-namespace CurrentStageMod
+namespace CurrentStage
 {
     [BepInDependency("com.bepis.r2api")]
-    [BepInPlugin("https://github.com/SlouchingCat/CurrentStageMod", "CurrentStageMod", "0.3")]
+    [BepInPlugin("https://github.com/SlouchingCat/CurrentStageMod", "CurrentStageMod", "1.1.1")]
 
-    public class CurrentStageMod : BaseUnityPlugin
+    public class CurrentStage : BaseUnityPlugin
     {
       float time = 15;
       float timeout = 15;

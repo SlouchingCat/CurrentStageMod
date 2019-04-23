@@ -1,8 +1,9 @@
 {
     "name": "CurrentStageMod",
-    "version_number": "0.3",
+    "version_number": "1.1.0",
     "website_url": "https://github.com/SlouchingCat/CurrentStageMod",
     "description": "This mod sends a message to chat when the stage advances.",
     "dependencies": [
+		"bbepis-BepInExPack-1.3.1"
     ]
 }
