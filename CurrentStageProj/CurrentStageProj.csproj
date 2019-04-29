@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>StageTrackerLite</AssemblyName>
+    <AssemblyName>CurrentStageMod</AssemblyName>
     <RootNamespace>CurrentStage</RootNamespace>
     <Configurations>Debug;Release;Make Build</Configurations>
     <Authors>CurrentStageMod</Authors>
