@@ -1,4 +1,4 @@
-## CurrentStageMod 
+## Stage Tracker Lite (formerly CurrentStageMod)
 #### By SlouchingCat (April 2018)
 
 ### Mod Features:
@@ -9,9 +9,15 @@ On Intermission stages (Bazaar and Moment), the counter will not advance. A mess
 #### Future Features:
 - Global announcement for multiplayer
 - UI overlay with stage number
-- Toggle this mod's features on/off in-game
+- Toggle this mod's features on/off
 
 #### Usage:
 This mod is intended to be used with **BepInEx**.
 
-Copy the `CurrentStageMod` folder (containing the .dll) into the `BepInEx\plugins` directory.
+Copy the `StageTrackerLite` .dll into the `BepInEx\plugins` directory.
+
+Note: In future versions this mod plans to switch to multimod for better UI support.
+
+#### Patch Notes:
+- v1.1.2: Fixed an issue with stage count not resetting when starting a new run.
+- v1.1.1: Core functionality added.

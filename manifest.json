@@ -1,6 +1,6 @@
 {
-    "name": "CurrentStageMod",
-    "version_number": "1.1.0",
+    "name": "Stage Tracker Lite",
+    "version_number": "1.1.2",
     "website_url": "https://github.com/SlouchingCat/CurrentStageMod",
     "description": "This mod sends a message to chat when the stage advances.",
     "dependencies": [
